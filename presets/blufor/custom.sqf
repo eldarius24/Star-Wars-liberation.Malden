@@ -50,6 +50,7 @@ infantry_units = [
     ["ct_rcnm_P1",6,0,0],
     ["ct_rcns_P1",6,0,0],
     ["ct_sgt_P1",6,0,0]
+];
 
 light_vehicles = [
     ["3as_BarcSideCar",10,0,5],                                        // Quad Bike
@@ -74,7 +75,6 @@ heavy_vehicles = [
     ["3AS_RX200_Base",60,40,30],
     ["3as_UTAT",60,45,30],
     ["3as_AV7",70,50,35]
-
 ];
 
 air_vehicles = [
