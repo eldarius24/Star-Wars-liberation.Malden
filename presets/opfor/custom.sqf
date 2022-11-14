@@ -57,7 +57,6 @@ militia_vehicles = [
     "3as_SAC_Trade", 
     "442_argon_covered_cis",
     "442_argon_transport_cis",
-    "3AS_MTT",
     "3AS_AAT"  
 ];
 
@@ -66,7 +65,6 @@ opfor_vehicles = [
     "3as_SAC_Trade", 
     "442_argon_covered_cis",
     "442_argon_transport_cis",
-    "3AS_MTT",
     "3AS_AAT"                                                 // Ifrit (GMG) 
 ];
 
@@ -75,7 +73,6 @@ opfor_vehicles_low_intensity = [
     "3as_SAC_Trade", 
     "442_argon_covered_cis",
     "442_argon_transport_cis",
-    "3AS_MTT",
     "3AS_AAT"                                                // Ifrit (HMG)
 ];
 
@@ -84,7 +81,6 @@ opfor_battlegroup_vehicles = [
     "3as_SAC_Trade", 
     "442_argon_covered_cis",
     "442_argon_transport_cis",
-    "3AS_MTT",
     "3AS_AAT",
     "3AS_HMP_Gunship",
     "3as_Tri_Fighter_dynamicLoadout",
@@ -96,7 +92,6 @@ opfor_battlegroup_vehicles_low_intensity = [
     "3as_SAC_Trade", 
     "442_argon_covered_cis",
     "442_argon_transport_cis",
-    "3AS_MTT",
     "3AS_AAT"  
 ];
 
@@ -106,7 +101,6 @@ opfor_troup_transports = [
     "3as_SAC_Trade", 
     "442_argon_covered_cis",
     "442_argon_transport_cis",
-    "3AS_MTT",
     "3AS_AAT",
     "3AS_HMP_Transport"
 ];
