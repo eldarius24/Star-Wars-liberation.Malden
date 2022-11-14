@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=5562;
+		nextID=5568;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1451;
+		nextID=1567;
 	};
 	class Camera
 	{
-		pos[]={190.89331,525.90753,899.4743};
-		dir[]={0.30389774,-0.45411772,-0.83754444};
-		up[]={0.15489428,0.89093411,-0.42689139};
-		aside[]={-0.94006044,4.0023588e-007,-0.34109345};
+		pos[]={184.83923,525.68097,886.63031};
+		dir[]={0.11180581,-0.45740271,0.88220316};
+		up[]={0.05750883,0.88925964,0.45377308};
+		aside[]={0.99206471,-3.7252903e-009,-0.12572908};
 	};
 };
 binarizationWanted=0;
@@ -144,14 +144,14 @@ addons[]=
 	"SWLB_equipment_facewears",
 	"lsd_armor_bluefor",
 	"CUP_Misc_e_Config",
-	"3AS_Prop_Crates",
-	"SWLB_CEE"
+	"AICommand",
+	"A3_Modules_F_Hc"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=78;
+		items=77;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -629,13 +629,8 @@ class AddonsMetaData
 		};
 		class Item76
 		{
-			className="3AS_Prop_Crates";
-			name="3AS_Prop_Crates";
-		};
-		class Item77
-		{
-			className="SWLB_CEE";
-			name="SWLB_CEE";
+			className="AICommand";
+			name="AICommand";
 		};
 	};
 };
@@ -967,7 +962,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=420;
+		items=422;
 		class Item0
 		{
 			dataType="Layer";
@@ -69109,10 +69104,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={179.49203,505.7673,913.3504};
+				position[]={179.492,505.76758,913.34998};
 			};
 			id=5115;
 			type="SSS_module_AddTransport";
+			atlOffset=0.0002746582;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -69124,7 +69120,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="this setPosASL (getPosASL simplexlaat1)";
+							value="_this setPosASL (getPosASL simplexlaat1)";
 						};
 					};
 				};
@@ -73081,7 +73077,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={435.91476,505.82581,431.78766};
-				angles[]={-0,5.859591,0};
+				angles[]={0,5.859591,0};
 			};
 			side="Empty";
 			flags=4;
@@ -73817,7 +73813,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={422.38254,505.78094,443.46149};
-				angles[]={-0,3.1415927,0};
+				angles[]={0,3.1415927,0};
 			};
 			name="gamelogic_1";
 			id=5321;
@@ -73830,7 +73826,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={413.4548,505.789,439.06207};
-				angles[]={-0,3.1415927,0};
+				angles[]={0,3.1415927,0};
 			};
 			name="HC1_1";
 			isPlayable=1;
@@ -73844,7 +73840,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={414.16183,505.76685,446.19977};
-				angles[]={-0,3.1415927,0};
+				angles[]={0,3.1415927,0};
 			};
 			name="HC2_1";
 			isPlayable=1;
@@ -73858,7 +73854,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={415.13156,505.75833,453.82477};
-				angles[]={-0,3.1415927,0};
+				angles[]={0,3.1415927,0};
 			};
 			name="HC3_1";
 			isPlayable=1;
@@ -73878,15 +73874,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={434.95041,505.82724,428.08051};
-						angles[]={0,6.248538,-0};
+						position[]={434.95001,505.82733,428.08099};
+						angles[]={0,6.2485409,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="ARC Sergent ";
+						description="ARC Sergent Major";
 						isPlayable=1;
 						class Inventory
 						{
@@ -73946,6 +73942,7 @@ class Mission
 					};
 					id=5326;
 					type="B_Soldier_F";
+					atlOffset=9.1552734e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -73982,8 +73979,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={434.91867,505.82724,428.04919};
-						angles[]={0,6.1521959,-0};
+						position[]={434.74338,505.82724,427.83722};
+						angles[]={0,6.1521959,0};
 					};
 					side="West";
 					flags=5;
@@ -74085,8 +74082,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={434.94211,505.82724,428.07434};
-						angles[]={0,6.1521959,-0};
+						position[]={435.27676,505.82724,428.20432};
+						angles[]={0,6.1521959,0};
 					};
 					side="West";
 					flags=5;
@@ -74188,6 +74185,7 @@ class Mission
 			{
 			};
 			id=5325;
+			atlOffset=9.1552734e-005;
 		};
 		class Item400
 		{
@@ -75795,13 +75793,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={433.05832,505.827,431.96448};
+						position[]={433.05801,505.82657,431.96399};
 						angles[]={6.2791882,4.7279749,6.2240534};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+						rank="MAJOR";
 						name="Snoop";
 						description="Commandant Snoop";
 						isPlayable=1;
@@ -75847,7 +75846,7 @@ class Mission
 					};
 					id=5363;
 					type="3as_Clone_P1_CC_D";
-					atlOffset=0.070770264;
+					atlOffset=0.070343018;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -75884,13 +75883,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={433.14719,505.82776,431.0755};
+						position[]={433.147,505.8277,431.07599};
 						angles[]={0.0095993113,4.7279749,6.2105098};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						rank="MAJOR";
 						name="Tau";
 						description="Commandant Tau";
 						isPlayable=1;
@@ -75936,7 +75936,7 @@ class Mission
 					};
 					id=5364;
 					type="3as_Clone_P1_CC_D";
-					atlOffset=0.00051879883;
+					atlOffset=0.00045776367;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -75973,7 +75973,7 @@ class Mission
 			{
 			};
 			id=5362;
-			atlOffset=0.070770264;
+			atlOffset=0.070343018;
 		};
 		class Item408
 		{
@@ -77119,173 +77119,53 @@ class Mission
 		};
 		class Item418
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={199.09348,507.0816,911.13562};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=5384;
-			type="3as_Big_Box_1_prop";
+			dataType="Layer";
+			name="Clone Pilot ";
+			id=5419;
+			atlOffset=96.5;
 		};
 		class Item419
 		{
-			dataType="Layer";
-			name="Clone Pilot ";
-			class Entities
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={248.75851,505.77188,711.01782};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								isPlayer=1;
-								class Inventory
-								{
-									class primaryWeapon
-									{
-										name="SWLW_DC15s";
-										firemode="SWLW_DC15s:Single";
-										class primaryMuzzleMag
-										{
-											name="SWLW_DC15s_Mag";
-											ammoLeft=60;
-										};
-									};
-									class handgun
-									{
-										name="SWLW_DC17";
-										class primaryMuzzleMag
-										{
-											name="SWLW_DC17_Mag";
-											ammoLeft=20;
-										};
-									};
-									class uniform
-									{
-										typeName="SWLB_clone_uniform";
-										isBackpack=0;
-										class MagazineCargo
-										{
-											items=7;
-											class Item0
-											{
-												name="SWLW_DC15s_Mag";
-												count=9;
-												ammoLeft=60;
-											};
-											class Item1
-											{
-												name="SWLW_DC17_Mag";
-												count=2;
-												ammoLeft=20;
-											};
-											class Item2
-											{
-												name="SWLW_beltGrenade_mag";
-												count=2;
-												ammoLeft=1;
-											};
-											class Item3
-											{
-												name="SmokeShell";
-												count=2;
-												ammoLeft=1;
-											};
-											class Item4
-											{
-												name="SmokeShellGreen";
-												count=1;
-												ammoLeft=1;
-											};
-											class Item5
-											{
-												name="SmokeShellBlue";
-												count=1;
-												ammoLeft=1;
-											};
-											class Item6
-											{
-												name="SmokeShellOrange";
-												count=1;
-												ammoLeft=1;
-											};
-										};
-										class ItemCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="FirstAidKit";
-												count=3;
-											};
-										};
-									};
-									class vest
-									{
-										typeName="SWLB_clone_basic_armor";
-										isBackpack=0;
-										class MagazineCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="Chemlight_green";
-												count=1;
-												ammoLeft=1;
-											};
-										};
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									watch="ItemWatch";
-									radio="SWLB_comlink";
-									headgear="SWLB_P1_Pilot_Helmet_Republic";
-								};
-							};
-							id=5418;
-							type="SWLB_clone_pilot_base_P2";
-							atlOffset=0.00012207031;
-						};
-					};
-					class Attributes
-					{
-					};
-					id=5417;
-					atlOffset=0.00012207031;
-				};
+				position[]={298.15399,505.76761,674.62903};
 			};
-			id=5419;
-			atlOffset=0.00012207031;
+			id=5564;
+			type="AdvancedAICommand_Groups";
+			atlOffset=0.00030517578;
+		};
+		class Item420
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={-201.59468,0,-2167.6716};
+			};
+			id=5565;
+			type="HighCommandSubordinate";
+			atlOffset=96.5;
+		};
+		class Item421
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={431.31241,505.75269,434.38275};
+			};
+			id=5567;
+			type="AdvancedAICommand_Groups";
 		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=14;
+			nextID=15;
 		};
 		class Links
 		{
-			items=14;
+			items=15;
 			class Item0
 			{
 				linkID=0;
@@ -77421,6 +77301,16 @@ class Mission
 				linkID=13;
 				item0=5118;
 				item1=5097;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item14
+			{
+				linkID=14;
+				item0=5326;
+				item1=5567;
 				class CustomData
 				{
 					type="Sync";
