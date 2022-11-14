@@ -228,21 +228,15 @@ blufor_squad_inf_light = [
 blufor_squad_inf = [
     "ct_sgt_P1",
     "ct_P1",
-    "ct_P1",
-    "ct_light_P1",
     "ct_light_P1",
     "ct_aa_P1",
     "ct_at_P1",
     "ct_med_P1",
     "ct_z6_P1",
     "ct_P1",
-    "ct_P1",
     "ct_light_P1",
     "ct_light_P1",
-    "ct_aa_P1",
-    "ct_at_P1",
-    "ct_med_P1",
-    "ct_z6_P1"
+    "ct_aa_P1"
 ];
 
 // AT specialists squad.
