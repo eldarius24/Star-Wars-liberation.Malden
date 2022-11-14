@@ -296,22 +296,23 @@ blufor_squad_para = [
     Classnames below have to be unlocked by capturing military bases.
     Which base locks a vehicle is randomized on the first start of the campaign.
 */
-elite_vehicles = [    ["3as_saber_m1Recon",40,8,20],
-    ["3as_saber_super",40,12,20],
-    ["3as_saber_m1",40,0,20],
-    ["3as_saber_m1G",40,15,25],
-    ["3as_Jug",40,15,25],
-    ["3as_ATTE_Base",60,20,30],
-    ["3as_ATAP_Base",60,30,30],
-    ["3AS_RX200_Base",60,40,30],
-    ["3as_UTAT",60,45,30],
-    ["3as_AV7",70,50,35],
-    ["3as_LAAT_Mk1",40,0,20],
-    ["ls_heli_laati_transport",40,20,20],
-    ["3AS_LAATC",40,0,20],
-    ["3AS_BTLB_Bomber",40,40,20],
-    ["3as_V19_base",45,0,25],
-    ["3as_arc_170_red",45,40,25],
-    ["3as_Z95_Republic",100,80,40],
-    ["lsd_heli_laati",100,100,40]
+elite_vehicles = [    
+    "3as_saber_m1Recon",
+    "3as_saber_super",        
+    "3as_saber_m1",           
+    "3as_saber_m1G",          
+    "3as_Jug",                
+    "3as_ATTE_Base",          
+    "3as_ATAP_Base",          
+    "3AS_RX200_Base",         
+    "3as_UTAT",               
+    "3as_AV7",                
+    "3as_LAAT_Mk1",           
+    "ls_heli_laati_transport",
+    "3AS_LAATC",              
+    "3AS_BTLB_Bomber",        
+    "3as_V19_base",           
+    "3as_arc_170_red",        
+    "3as_Z95_Republic",       
+    "lsd_heli_laati"        
 ];
