@@ -15,7 +15,7 @@
 		<Boolean> - true on success, false on failure
 
 	Examples:
-		<example>
+		[[_this, simplexlaat1,["B_support_Mort_F","B_support_Mort_F"]],"UC\fnc.simplexTP.sqf"] remoteExec ["BIS_fnc_execVM", 2];
 */
 
 _canno = _this select 0;
