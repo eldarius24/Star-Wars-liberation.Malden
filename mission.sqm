@@ -72332,7 +72332,7 @@ class Mission
 				position[]={413.4548,505.789,439.06207};
 				angles[]={0,3.1415927,0};
 			};
-			name="HC1_1";
+			name="HC1";
 			isPlayable=1;
 			id=5322;
 			type="HeadlessClient_F";
@@ -72346,7 +72346,7 @@ class Mission
 				position[]={414.16183,505.76685,446.19977};
 				angles[]={0,3.1415927,0};
 			};
-			name="HC2_1";
+			name="HC2";
 			isPlayable=1;
 			id=5323;
 			type="HeadlessClient_F";
@@ -72360,7 +72360,7 @@ class Mission
 				position[]={415.13156,505.75833,453.82477};
 				angles[]={0,3.1415927,0};
 			};
-			name="HC3_1";
+			name="HC3";
 			isPlayable=1;
 			id=5324;
 			type="HeadlessClient_F";
