@@ -98,10 +98,10 @@ static_vehicles = [
 buildings = [
     ["3AS_FOB_Building_2_prop",0,0,0],
     ["3as_prop_fob_modular_watchtower",0,0,0],
-    ["3AS_FOB_Building_2_prop",0,0,0],
+    ["3AS_FOB_Building_1_prop",0,0,0],
     ["ls_commandPost_white_yellow",0,0,0],
     ["3AS_Tent_Med",0,0,0],
-    ["Land_PortableLight_single_F",0,0,0],
+    ["3as_FOB_Light_Tall_Prop",0,0,0],
     ["Land_PortableLight_double_F",0,0,0],
     ["Land_LampSolar_F",0,0,0],
     ["Land_LampHalogen_F",0,0,0],
@@ -162,7 +162,13 @@ buildings = [
     ["Land_Sign_WarningMilAreaSmall_F",0,0,0],
     ["Land_Sign_WarningMilitaryVehicles_F",0,0,0],
     ["Land_Razorwire_F",0,0,0],
-    ["Land_ClutterCutter_large_F",0,0,0]
+    ["Land_ClutterCutter_large_F",0,0,0],
+    ["3as_Landingpad_prop",0,0,0],
+    ["3as_Landingpad_2_prop",0,0,0],
+    ["3as_Landingpad_3_prop",0,0,0],
+    ["3as_Landingpad_4_prop",0,0,0],
+    ["3as_Landingpad_5_prop",0,0,0],
+    ["3as_Landingpad_R3_prop",0,0,0]
 ];
 
 support_vehicles = [
