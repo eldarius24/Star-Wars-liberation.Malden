@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=5696;
+		nextID=5718;
 	};
 	class LayerIndexProvider
 	{
-		nextID=2031;
+		nextID=2263;
 	};
 	class Camera
 	{
-		pos[]={7917.4565,51.177025,9538.5645};
-		dir[]={-0.079247907,-0.25534824,-0.96360981};
-		up[]={-0.020930357,0.96684718,-0.25449499};
-		aside[]={-0.99664968,1.7347702e-008,0.08196459};
+		pos[]={159.41611,522.55664,916.86224};
+		dir[]={0.83212554,-0.31894079,-0.45370239};
+		up[]={0.28002292,0.94777375,-0.15267794};
+		aside[]={-0.47870225,9.4412826e-008,-0.87797749};
 	};
 };
 binarizationWanted=0;
@@ -145,15 +145,13 @@ addons[]=
 	"lsd_armor_bluefor",
 	"CUP_Misc_e_Config",
 	"AICommand",
-	"A3_Modules_F_Hc",
-	"3AS_BTLB_Bomber",
-	"B_RepubliqueClone_HighVis"
+	"A3_Modules_F_Hc"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=79;
+		items=77;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -634,17 +632,6 @@ class AddonsMetaData
 			className="AICommand";
 			name="AICommand";
 		};
-		class Item77
-		{
-			className="3AS_BTLB_Bomber";
-			name="3AS_BTLB_Bomber";
-		};
-		class Item78
-		{
-			className="B_RepubliqueClone_HighVis";
-			name="B_RepubliqueClone_HighVis";
-			author="CMDR-0403 Snoop";
-		};
 	};
 };
 dlcs[]=
@@ -798,7 +785,7 @@ class CustomAttributes
 		class Attribute1
 		{
 			property="ENH_saveLoadout";
-			expression="    if (!is3DEN && hasInterface && _value && isMultiplayer) then    {      [] spawn      {        scriptName 'ENH_Attribute_SaveLoadout';        waitUntil {sleep 1; !isNull player};        player setVariable ['ENH_savedLoadout', getUnitloadout player];        player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'ENH_savedLoadout')}];      };    };  ";
+			expression="if (!isMultiplayer || !_value || is3DEN) exitWith {};    if (hasInterface) then    {      [] spawn      {        waitUntil {sleep 1; !isNull player};        diag_log format ['ENH_saveLoadout: Player (%1) was detected at %2.', player, time];        player setVariable ['ENH_savedLoadout', getUnitloadout player];        player addMPEventHandler ['MPRespawn',        {          params ['_unit', '_corpse'];          private _loadout = _unit getVariable ['ENH_savedLoadout', []];          if (_loadout isNotEqualTo []) then          {            _unit setUnitLoadout _loadout;            diag_log format ['ENH_saveLoadout: Loadout of player (%1) was set to %2 at %3', _unit, _loadout, time];          };        }];      };    };";
 			class Value
 			{
 				class data
@@ -975,7 +962,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=426;
+		items=427;
 		class Item0
 		{
 			dataType="Layer";
@@ -13248,7 +13235,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={142.17599,504.74344,891.4613};
+												position[]={159.42609,504.70453,899.82251};
 												angles[]={0,1.129745,0};
 											};
 											side="Empty";
@@ -13259,7 +13246,7 @@ class Mission
 											};
 											id=3751;
 											type="ls_50x50";
-											atlOffset=604.60724;
+											atlOffset=602.93884;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -39458,7 +39445,7 @@ class Mission
 									};
 									id=4323;
 									type="3AS_Prop_platform_30x30_cis";
-									atlOffset=16.171326;
+									atlOffset=16.193146;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -39505,7 +39492,7 @@ class Mission
 									};
 									id=4324;
 									type="ls_50x25";
-									atlOffset=7.3735962;
+									atlOffset=7.3954163;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -39599,7 +39586,7 @@ class Mission
 									};
 									id=4326;
 									type="3AS_Prop_platform_30x30_rep";
-									atlOffset=17.730225;
+									atlOffset=17.752045;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -75315,16 +75302,16 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={140.17525,505.47128,1007.8992};
+				position[]={137.18037,505.7673,1003.6451};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				name="simplexlaat4";
 			};
 			id=5383;
 			type="ClutterCutter_small_2_EP1";
-			atlOffset=598.88623;
 		};
 		class Item414
 		{
@@ -76966,246 +76953,6 @@ class Mission
 		};
 		class Item420
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={138.32127,507.53549,1009.9195};
-				angles[]={0,5.8125539,0};
-			};
-			side="West";
-			flags=6;
-			class Attributes
-			{
-			};
-			id=5595;
-			type="3AS_BTLB_Bomber_RedLeader";
-		};
-		class Item421
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={138.32127,505.68289,1009.9702};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-					};
-					id=5597;
-					type="ct_pilote_P1";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={138.32127,505.68289,1009.9702};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=5599;
-					type="ct_pilote_P1";
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=2;
-				};
-				class Links
-				{
-					items=2;
-					class Item0
-					{
-						linkID=0;
-						item0=5597;
-						item1=5595;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
-						item0=5599;
-						item1=5595;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=5596;
-		};
-		class Item422
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={173.272,505.76688,915.88202};
-			};
-			id=5602;
-			type="SSS_module_AddCASPlane";
-			atlOffset=0.018371582;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="SSS_module_AddCASPlane_AccessItems";
-					expression="_this setVariable ['AccessItems',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="itemMap";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="SSS_module_AddCASPlane_Callsign";
-					expression="_this setVariable ['Callsign',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="SSS_module_AddCASPlane_Classname";
-					expression="_this setVariable ['Classname',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="Y-Wing CAS";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="SSS_module_AddCASPlane_CustomInit";
-					expression="_this setVariable ['CustomInit',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="_this setPosASL (getPosASL simplexlaat4)";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="SSS_module_AddCASPlane_Side";
-					expression="_this setVariable ['Side',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=0;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="SSS_module_AddCASPlane_Cooldown";
-					expression="_this setVariable ['Cooldown',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="300";
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="SSS_module_AddCASPlane_WeaponSet";
-					expression="_this setVariable ['WeaponSet',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[""Gatling_30mm_Plane_CAS_01_F"",""Rocket_04_HE_Plane_CAS_01_F"",""Bomb_04_Plane_CAS_01_F""]";
-						};
-					};
-				};
-				class Attribute7
-				{
-					property="SSS_module_AddCASPlane_AccessCondition";
-					expression="_this setVariable ['AccessCondition',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="true";
-						};
-					};
-				};
-				class Attribute8
-				{
-					property="SSS_module_AddCASPlane_RequestApprovalCondition";
-					expression="_this setVariable ['RequestApprovalCondition',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="true";
-						};
-					};
-				};
-				nAttributes=9;
-			};
-		};
-		class Item423
-		{
 			dataType="Group";
 			side="West";
 			class Entities
@@ -78705,7 +78452,7 @@ class Mission
 			id=5606;
 			atlOffset=-3.8146973e-006;
 		};
-		class Item424
+		class Item421
 		{
 			dataType="Object";
 			class PositionInfo
@@ -78722,7 +78469,7 @@ class Mission
 			type="lsd_heli_laati_transport";
 			atlOffset=-3.8146973e-006;
 		};
-		class Item425
+		class Item422
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -78815,16 +78562,544 @@ class Mission
 				nAttributes=6;
 			};
 		};
+		class Item423
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={168.882,505.76776,914.91498};
+			};
+			id=5714;
+			type="SSS_module_AddCASPlane";
+			atlOffset=0.00045776367;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="SSS_module_AddCASPlane_AccessItems";
+					expression="_this setVariable ['AccessItems',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="itemMap";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="SSS_module_AddCASPlane_Callsign";
+					expression="_this setVariable ['Callsign',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="SSS_module_AddCASPlane_Classname";
+					expression="_this setVariable ['Classname',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="3AS_BTLB_Bomber";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="SSS_module_AddCASPlane_CustomInit";
+					expression="_this setVariable ['CustomInit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="SSS_module_AddCASPlane_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="SSS_module_AddCASPlane_Cooldown";
+					expression="_this setVariable ['Cooldown',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="300";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="SSS_module_AddCASPlane_WeaponSet";
+					expression="_this setVariable ['WeaponSet',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[""3as_ARC_Light_Canon"",""CMFlareLauncher"",""3as_BTLB_Heavy_Cannon"",""Bomb_04_Plane_CAS_01_F""]";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="SSS_module_AddCASPlane_AccessCondition";
+					expression="_this setVariable ['AccessCondition',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="SSS_module_AddCASPlane_RequestApprovalCondition";
+					expression="_this setVariable ['RequestApprovalCondition',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				nAttributes=9;
+			};
+		};
+		class Item424
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={167.86409,505.76776,913.63983};
+			};
+			id=5715;
+			type="SSS_module_AddCASPlane";
+			atlOffset=0.00045776367;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="SSS_module_AddCASPlane_AccessItems";
+					expression="_this setVariable ['AccessItems',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="itemMap";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="SSS_module_AddCASPlane_Callsign";
+					expression="_this setVariable ['Callsign',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="SSS_module_AddCASPlane_Classname";
+					expression="_this setVariable ['Classname',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="3AS_BTLB_Bomber";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="SSS_module_AddCASPlane_CustomInit";
+					expression="_this setVariable ['CustomInit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="SSS_module_AddCASPlane_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="SSS_module_AddCASPlane_Cooldown";
+					expression="_this setVariable ['Cooldown',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="300";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="SSS_module_AddCASPlane_WeaponSet";
+					expression="_this setVariable ['WeaponSet',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[""3as_ARC_Light_Canon"",""CMFlareLauncher"",""3as_BTLB_Heavy_Cannon"",""Bomb_04_Plane_CAS_01_F""]";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="SSS_module_AddCASPlane_AccessCondition";
+					expression="_this setVariable ['AccessCondition',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="SSS_module_AddCASPlane_RequestApprovalCondition";
+					expression="_this setVariable ['RequestApprovalCondition',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				nAttributes=9;
+			};
+		};
+		class Item425
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={170.50211,505.76776,913.37982};
+			};
+			id=5716;
+			type="SSS_module_AddCASPlane";
+			atlOffset=0.00045776367;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="SSS_module_AddCASPlane_AccessItems";
+					expression="_this setVariable ['AccessItems',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="itemMap";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="SSS_module_AddCASPlane_Callsign";
+					expression="_this setVariable ['Callsign',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="SSS_module_AddCASPlane_Classname";
+					expression="_this setVariable ['Classname',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="3AS_BTLB_Bomber";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="SSS_module_AddCASPlane_CustomInit";
+					expression="_this setVariable ['CustomInit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="SSS_module_AddCASPlane_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="SSS_module_AddCASPlane_Cooldown";
+					expression="_this setVariable ['Cooldown',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="300";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="SSS_module_AddCASPlane_WeaponSet";
+					expression="_this setVariable ['WeaponSet',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[""3as_ARC_Light_Canon"",""CMFlareLauncher"",""3as_BTLB_Heavy_Cannon"",""Bomb_04_Plane_CAS_01_F""]";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="SSS_module_AddCASPlane_AccessCondition";
+					expression="_this setVariable ['AccessCondition',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="SSS_module_AddCASPlane_RequestApprovalCondition";
+					expression="_this setVariable ['RequestApprovalCondition',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				nAttributes=9;
+			};
+		};
+		class Item426
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={169.44914,505.76776,912.53259};
+			};
+			id=5717;
+			type="SSS_module_AddCASPlane";
+			atlOffset=0.00045776367;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="SSS_module_AddCASPlane_AccessItems";
+					expression="_this setVariable ['AccessItems',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="itemMap";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="SSS_module_AddCASPlane_Callsign";
+					expression="_this setVariable ['Callsign',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="SSS_module_AddCASPlane_Classname";
+					expression="_this setVariable ['Classname',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="3AS_BTLB_Bomber";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="SSS_module_AddCASPlane_CustomInit";
+					expression="_this setVariable ['CustomInit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="SSS_module_AddCASPlane_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="SSS_module_AddCASPlane_Cooldown";
+					expression="_this setVariable ['Cooldown',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="300";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="SSS_module_AddCASPlane_WeaponSet";
+					expression="_this setVariable ['WeaponSet',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[""3as_ARC_Light_Canon"",""CMFlareLauncher"",""3as_BTLB_Heavy_Cannon"",""Bomb_04_Plane_CAS_01_F""]";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="SSS_module_AddCASPlane_AccessCondition";
+					expression="_this setVariable ['AccessCondition',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="SSS_module_AddCASPlane_RequestApprovalCondition";
+					expression="_this setVariable ['RequestApprovalCondition',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="true";
+						};
+					};
+				};
+				nAttributes=9;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=16;
+			nextID=15;
 		};
 		class Links
 		{
-			items=16;
+			items=15;
 			class Item0
 			{
 				linkID=0;
@@ -78968,16 +79243,6 @@ class Mission
 			class Item14
 			{
 				linkID=14;
-				item0=5602;
-				item1=5595;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item15
-			{
-				linkID=15;
 				item0=5628;
 				item1=5627;
 				class CustomData
