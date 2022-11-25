@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=5718;
+		nextID=5719;
 	};
 	class LayerIndexProvider
 	{
-		nextID=2379;
+		nextID=2495;
 	};
 	class Camera
 	{
-		pos[]={432.97989,508.13248,431.04114};
-		dir[]={0.96417004,-0.26301572,-0.035490427};
-		up[]={0.26285356,0.96478152,-0.0096760504};
-		aside[]={-0.036786504,1.4813941e-007,-0.99935722};
+		pos[]={158.134,523.90588,932.81219};
+		dir[]={0.42893422,-0.39866224,-0.81068301};
+		up[]={0.18647327,0.91706043,-0.35243553};
+		aside[]={-0.88395995,2.9329385e-007,-0.46770474};
 	};
 };
 binarizationWanted=0;
@@ -18623,7 +18623,7 @@ class Mission
 										};
 									};
 									id=3719;
-									atlOffset=594.84991;
+									atlOffset=301.00589;
 								};
 								class Item1
 								{
@@ -25927,7 +25927,7 @@ class Mission
 								};
 							};
 							id=3718;
-							atlOffset=580.54523;
+							atlOffset=0.29959106;
 						};
 						class Item2
 						{
@@ -69109,7 +69109,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[[_this, simplexlaat1,[""ct_sgt_P1"",""ct_P1""]],""UC\fnc.simplexTP.sqf""] remoteExec [""BIS_fnc_execVM"", 2];";
+							value="_this setPosASL (getPosASL simplexlaat1)";
 						};
 					};
 				};
@@ -76533,28 +76533,12 @@ class Mission
 		};
 		class Item413
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={137.18037,505.7673,1003.6451};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				name="simplexlaat4";
-			};
-			id=5383;
-			type="ClutterCutter_small_2_EP1";
-		};
-		class Item414
-		{
 			dataType="Layer";
 			name="Clone Pilot ";
 			id=5419;
 			atlOffset=96.5;
 		};
-		class Item415
+		class Item414
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -76565,7 +76549,7 @@ class Mission
 			type="AdvancedAICommand_Groups";
 			atlOffset=0.00030517578;
 		};
-		class Item416
+		class Item415
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -76576,7 +76560,7 @@ class Mission
 			type="HighCommandSubordinate";
 			atlOffset=96.5;
 		};
-		class Item417
+		class Item416
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -76586,7 +76570,7 @@ class Mission
 			id=5567;
 			type="AdvancedAICommand_Groups";
 		};
-		class Item418
+		class Item417
 		{
 			dataType="Group";
 			side="West";
@@ -78066,7 +78050,7 @@ class Mission
 			};
 			id=5568;
 		};
-		class Item419
+		class Item418
 		{
 			dataType="Group";
 			side="West";
@@ -78185,7 +78169,7 @@ class Mission
 			id=5589;
 			atlOffset=0.072814941;
 		};
-		class Item420
+		class Item419
 		{
 			dataType="Group";
 			side="West";
@@ -79686,7 +79670,7 @@ class Mission
 			id=5606;
 			atlOffset=-3.8146973e-006;
 		};
-		class Item421
+		class Item420
 		{
 			dataType="Object";
 			class PositionInfo
@@ -79703,7 +79687,7 @@ class Mission
 			type="lsd_heli_laati_transport";
 			atlOffset=-3.8146973e-006;
 		};
-		class Item422
+		class Item421
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -79796,7 +79780,7 @@ class Mission
 				nAttributes=6;
 			};
 		};
-		class Item423
+		class Item422
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -79928,7 +79912,7 @@ class Mission
 				nAttributes=9;
 			};
 		};
-		class Item424
+		class Item423
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -80060,7 +80044,7 @@ class Mission
 				nAttributes=9;
 			};
 		};
-		class Item425
+		class Item424
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -80192,7 +80176,7 @@ class Mission
 				nAttributes=9;
 			};
 		};
-		class Item426
+		class Item425
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -80323,6 +80307,22 @@ class Mission
 				};
 				nAttributes=9;
 			};
+		};
+		class Item426
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={137.18037,505.7673,1003.6451};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="simplexlaat4";
+			};
+			id=5383;
+			type="ClutterCutter_small_2_EP1";
 		};
 	};
 	class Connections
